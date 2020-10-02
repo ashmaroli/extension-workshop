@@ -7,7 +7,7 @@ cache: bundler
 before_install:
   - git checkout 033823b
   - gem update --system --no-document
-  - gem install bundler --no-document
+  - bundle update --bundler
 
 rvm: 2.7
 script: bundle exec jekyll build -Vt
