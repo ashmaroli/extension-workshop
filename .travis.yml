@@ -1,0 +1,13 @@
+git:
+  depth: false
+
+language: ruby
+cache: bundler
+
+before_install:
+  - git checkout 033823b
+  - gem update --system --no-document
+  - gem install bundler --no-document
+
+rvm: 2.7
+script: bundle exec jekyll build -Vt
