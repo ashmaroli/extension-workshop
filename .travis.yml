@@ -14,6 +14,8 @@ before_install:
 install:
   - bundle install -j8
   - yarn install
-script: yarn build
+script:
+  - yarn build
+  - yarn memprof
 notifications:
   email: false
