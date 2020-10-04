@@ -36,9 +36,9 @@
     "prettier-dev": "pretty-quick --branch master",
     "test": "npm run prettier-ci && npm run lint && npm run stylelint",
     "clean": "rimraf './.jekyll-cache/' && jekyll clean",
-    "build": "JEKYLL_ENV=production SVGO_BIN='node_modules/svgo/bin/svgo' jekyll build",
-    "start": "jekyll serve --unpublished --incremental --config _config.yml,_config_local.yml",
-    "start-no-increment": "jekyll serve --unpublished --config _config.yml,_config_local.yml",
-    "start-prodlike": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
+    "build": "JEKYLL_ENV=production SVGO_BIN='node_modules/svgo/bin/svgo' bundle exec jekyll build -Vt",
+    "start": "bundle exec jekyll serve --unpublished --incremental --config _config.yml,_config_local.yml",
+    "start-no-increment": "bundle exec jekyll serve --unpublished --config _config.yml,_config_local.yml",
+    "start-prodlike": "SVGO_BIN='node_modules/svgo/bin/svgo' bundle exec jekyll serve"
   }
 }

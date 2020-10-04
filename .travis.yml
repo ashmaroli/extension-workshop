@@ -1,0 +1,19 @@
+language: ruby
+cache:
+  bundler: true
+  yarn: true
+  directories:
+    - vendor/bundle
+    - node_modules
+rvm: 2.6
+before_install:
+  - gem update --system --no-document
+  - gem install bundler --no-document
+  - bundle config path vendor/bundle
+  - nvm install 12
+install:
+  - bundle install -j8
+  - yarn install
+script: yarn build
+notifications:
+  email: false
