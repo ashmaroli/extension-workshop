@@ -37,9 +37,9 @@ kramdown:
   auto_ids: false
 
 # theme: minima
-plugins:
-  - jekyll-target-blank
-#  - jekyll-feed
+# plugins:
+#   - jekyll-target-blank
+#   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
