@@ -50,6 +50,7 @@ module Jekyll
       #   has to change in the new content.
       # --
       def render(ctx)
+        return ""
         env = ctx.registers[:site].sprockets; args, asset = render_raw(ctx)
         # env.logger.debug args.to_h(html: false).inspect
 
